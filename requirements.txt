@@ -1,0 +1,5 @@
+flask
+pytest
+mysql-connector-python
+
+#  pip install -r requirements.txt -- instalar as bibliotecas do arquivo requirements.txt
