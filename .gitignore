@@ -1,0 +1,19 @@
+# Arquivos temporários do ambiente Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Ambientes virtuais
+venv/
+.venv/
+env/
+
+# Configurações de editores
+.vscode/
+.idea/
+
+# Arquivos locais/temporários de banco
+*.db
+*.sqlite3
