@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFlow Solutions - Autenticação</title>
+    <link href="https://jsdelivr.net" rel="stylesheet">
+</head>
+<body class="bg-dark d-flex align-items-center justify-content-center" style="height: 100vh;">
+    <div class="card p-4 shadow-lg" style="width: 360px;">
+        <div class="text-center mb-3">
+            <h3 class="text-primary fw-bold">TechFlow</h3>
+            <small class="text-muted">Sistema de Gestão Logística</small>
+        </div>
+        
+        <!-- Bloco dinâmico: Só exibe o alerta se o Flask enviar uma mensagem de erro -->
+        {% if erro %}
+            <div class="alert alert-danger py-2 text-center small" role="alert">{{ erro }}</div>
+        {% endif %}
+
+        <form action="/login" method="POST">
+            <div class="mb-3">
+                <label class="form-label small fw-bold">E-mail Corporativo</label>
+                <input type="email" name="email" class="form-control" required placeholder="Ex: fabio.ramos@gmail.com">
+            </div>
+            <div class="mb-3">
+                <label class="form-label small fw-bold">Senha</label>
+                <input type="password" name="password" class="form-control" required placeholder="Digite sua senha">
+            </div>
+            <button type="submit" class="btn btn-primary w-100 mt-2">Entrar</button>
+        </form>
+        <div class="text-center mt-3">
+            <a href="/cadastro" class="small text-decoration-none">Não tem login? Cadastre-se aqui</a>
+        </div>
+    </div>
+</body>
+</html>
