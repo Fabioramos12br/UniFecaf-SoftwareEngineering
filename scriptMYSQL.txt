@@ -1,0 +1,19 @@
+# script usado para montar o banco de dados (deixei aqui para ficar mais simples)
+
+create database db_SEunifecaf;
+
+use db_SEunifecaf;
+
+create table tbl_login(
+id int not null auto_increment primary key,
+nome varchar(500) not null,
+data_nascimento date not null,
+email varchar(255)not null unique,
+senha varchar(50) not null
+);
+
+INSERT INTO tbl_login (nome, data_nascimento, email, senha) VALUES ('Fabio', '2002-04-04', 'fabio.ramos@gmail.com', MD5('Fabio123'));
+
+show tables;
+SELECT * FROM tbl_login;
+
